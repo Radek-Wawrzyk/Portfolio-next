@@ -32,8 +32,9 @@ module.exports = {
         ignoreUrls: true,
         ignoreTemplateLiterals: true,
         ignoreRegExpLiterals: true,
-        ignorePattern: 'd="([\\s\\S]*?)"',
-      },
+        ignorePattern: 'd="([\\s\\S]*?)"'
+      }
+    ],
   },
   overrides: [
     {

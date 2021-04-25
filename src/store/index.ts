@@ -1,12 +1,8 @@
 import { createStore } from 'vuex';
+import uiModule from '@/store/modules/ui';
 
 export default createStore({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
   modules: {
+    uiModule,
   },
 });
