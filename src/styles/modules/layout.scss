@@ -1,0 +1,36 @@
+* { box-sizing: border-box; }
+body { overflow-x: hidden; background-color: $background-color; }
+img { max-width: 100%; height: auto; }
+
+// Layout
+.container {
+  max-width: calc(1400px - 4rem);
+  width: 100%;
+  position: relative;
+  padding: 0 2rem;
+  margin: 0 auto;
+  display: block;
+
+  &--big {
+    max-width: calc(1680px - 4rem);
+  }
+
+  &--small {
+    max-width: calc(1100px - 4rem);
+  }
+}
+
+.app {
+  position: relative;
+
+  &__page {
+    position: relative;
+  }
+}
+
+// Media
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
