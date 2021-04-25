@@ -49,6 +49,7 @@ export default defineComponent({
 <style scoped lang="scss">
 h3 {
   margin: 40px 0 0;
+  color: $primary;
 }
 ul {
   list-style-type: none;
