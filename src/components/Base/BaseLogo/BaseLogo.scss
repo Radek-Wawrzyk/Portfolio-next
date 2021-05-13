@@ -1,0 +1,10 @@
+.base-logo {
+  position: relative;
+  display: inline-block;
+  transition: $time opacity;
+  will-change: opacity;
+
+  &:hover, &:focus {
+    
+  }
+}

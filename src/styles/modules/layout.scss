@@ -4,19 +4,16 @@ img { max-width: 100%; height: auto; }
 
 // Layout
 .container {
-  max-width: calc(1400px - 4rem);
+  max-width: calc(1680px - 4rem);
   width: 100%;
   position: relative;
   padding: 0 2rem;
   margin: 0 auto;
   display: block;
 
-  &--big {
-    max-width: calc(1680px - 4rem);
-  }
 
   &--small {
-    max-width: calc(1100px - 4rem);
+    max-width: calc(1280px - 4rem);
   }
 }
 
