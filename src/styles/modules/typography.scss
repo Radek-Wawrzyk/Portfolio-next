@@ -1,4 +1,14 @@
-  
+// Fonts
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('/src/assets/font/ProximaNova-Regular.otf'),
+  url('/src/assets/font/Proxima\ Nova\ Bold.otf')  ;
+}
+
+html {
+  font-size: 1rem;
+}
+
 *, input, textarea, button, a, li {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -7,10 +17,18 @@
   text-rendering: optimizeLegibility;
   color: $text-color;
   line-height: 1.4;
-  font-family: 'Montserrat', sans-serif !important;
-  font-size: 1rem;
+  font-family: 'ProximaNova', sans-serif !important;
 }
 
 a {
   text-decoration: none;
+}
+
+// Fonts
+
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 0.9rem;
+  }
 }

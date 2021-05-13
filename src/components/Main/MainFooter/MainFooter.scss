@@ -1,0 +1,263 @@
+.main-footer {
+  position: relative;
+
+  &__header {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100vw;
+      height: 1px;
+      background-color: $border-color--accent;
+    }
+
+    &-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-name, &-logo {
+      padding: 0 2.25rem;
+      background-color: $background-color;
+      position: relative;
+      z-index: 1;
+    }
+
+    &-logo {
+      margin: 0 -2.25rem 0 0; 
+    }
+
+    &-name {
+      font-size: 2.25rem;
+      margin: 0 0 0 -2.25rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 0.08rem;
+      filter: blur(0.5px);
+    }
+  }
+
+  &-content {
+    padding: 100px 0;
+    border-bottom: 1px solid $border-color--accent;
+
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__info {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 150px;
+      width: 100%;
+      max-width: 680px;
+    }
+
+    &__block {
+      position: relative;
+
+      &-item {
+        margin: 0 0 2rem 0;
+      }
+
+      &-link, &-text {
+        font-size: 1.125rem;
+        letter-spacing: 0.08rem;
+      }
+
+      &-link {
+        transition: $time color;
+        will-change: color;
+
+        &:hover, &:focus {
+          color: $primary
+        }
+      }
+    }
+
+    &__navigation {
+      width: 100%;
+      max-width: 560px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 50px 100px;
+
+      &-item {
+        position: relative;
+      }
+
+      &-link {
+        position: relative;
+        display: block;
+        padding: 0.5rem 0.25rem;
+        font-size: 1.125rem;
+        font-weight: bold;
+        letter-spacing: 0.08rem;
+        white-space: nowrap;
+        transition: $time color;
+        will-change: color;
+
+        &:hover, &:focus {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  &-info {
+    padding: 100px 0;
+
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__copyright-text {
+      font-size: 1.125rem;
+      letter-spacing: 0.08rem;
+    }
+
+    &__socials {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      &-item {
+        margin: 0 3rem 1rem 0;
+
+        &:last-child {
+          margin: 0 0 1rem 0;
+        }
+      }
+
+      &-link {
+        display: block;
+        padding: 0.25rem;
+
+        &:hover, &:focus {
+          svg, svg path {
+            fill: $primary !important;
+          }
+        }
+
+        svg, path {
+          display: block;
+          width: 1.5rem;
+          height: 1.5rem;
+          fill: $text-color;
+          transition: $time fill;
+          will-change: fill;
+        }
+      }
+    }
+  }
+}
+
+// Media
+
+@media screen and (max-width: 1024px) {
+  .main-footer {
+    &-content {
+      
+      &__wrapper {
+        display: block;
+      }
+
+      &__navigation {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    &-info {
+      &__copyright-text {
+        width: 100%;
+        text-align: center;
+        margin: 0 0 4rem 0;
+      }
+
+      &__wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      &__socials {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-footer {
+    &__header {
+      &-content {
+        flex-direction: column;
+        text-align: center;
+      }  
+
+      &-logo {
+        margin: 0 0 0 -2.5rem;
+        max-width: 250px;
+        display: none;
+        
+        svg {
+          width: 100%;
+        }
+      }
+
+      &-name {
+        padding: 0 1rem;
+        margin: 0;
+      }
+    }
+
+    &-content {
+      padding: 60px 0;
+
+      &__wrapper {
+        display: block;
+      }
+
+      &__navigation {
+        display: block;
+
+        &-link {
+          padding: 1.1rem 0.25rem;
+        }
+      }
+    }
+
+    &-info {
+      padding: 60px 0;
+
+      &__copyright-text {
+        order: 1;
+        margin: 4rem 0 0 0;
+        text-align: center;
+        font-size: 0.9rem;
+      }
+
+      &__socials {
+        justify-content: space-evenly;
+
+        &-item {
+          margin: 0;
+
+          &:last-child {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
