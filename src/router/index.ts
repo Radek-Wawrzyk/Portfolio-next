@@ -11,7 +11,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'NotFound',
     component: () => import(/* webpackChunkName: "view-not-found" */ '@/views/NotFound/NotFound.vue'),
   },
-
+  {
+    path: '/style-guide',
+    name: 'StyleGuide',
+    component: () => import(/* webpackChunkName: "view-style-guide" */ '@/views/StyleGuide/StyleGuide.vue'),
+  },
 ];
 
 const router = createRouter({

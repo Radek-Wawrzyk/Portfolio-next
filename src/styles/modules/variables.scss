@@ -4,11 +4,19 @@ $primary:  #FFF200;
 // Texts
 $text-color: #ffffff;
 $text-color--accent: #9D9E9F;
+$text-color--reversed: #000000;
 
 // Layout
 $background-color:#000000;
 $border-color: #434343;
 $border-color--accent: #A9A9A9;
+
+// Buttons
+$button-border: #FFFFFF;
+$button-border--reversed: #000000;
+$button-border--active: $primary;
+$button-active: $primary;
+$button-disabled: #4B4B4B;
 
 // UI events
 $success: #2AC769;

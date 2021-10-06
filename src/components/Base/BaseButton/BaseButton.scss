@@ -1,0 +1,119 @@
+.base-button {
+  position: relative;
+  padding: 0.625rem 2rem;
+  border: none;
+  background-color: $background-color;
+  cursor: pointer;
+  transform: none;
+
+  &--is-active:active {
+    border-color: $button-border--active;
+    color: $button-border--active;
+  }
+
+  &:focus {
+    outline: 1px dashed $button-border;
+    outline-offset: 0.4rem;
+  }
+
+  &--default {
+    border: 2px solid $button-border;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: border-color $time, color $time;
+
+    &:hover {
+      border-color: $button-border--active;
+      color: $button-border--active;
+    }
+  }
+
+  &--default-reversed {
+    border: 2px solid $button-border--reversed;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: border-color $time, color $time;
+    background: transparent;
+    color: $text-color--reversed;
+
+    &:focus {
+      outline-color: $text-color--reversed;
+    }
+
+    &:hover {
+      border-color: $button-border--active;
+      color: $button-border--active;
+    }
+  }
+
+  &--primary {
+    border: 2px solid $button-border;
+    font-weight: bold;
+    font-size: 1.5rem;
+
+    &::before {
+      z-index: -1;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      border: 2px solid $button-border--active;
+      transition: transform $time, opacity $time;
+      will-change: transform;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+        transform: translate3d(-0.625rem, 0.625rem, 0);
+      }
+    }
+  }
+
+  &--primary-reversed {
+    border: 2px solid $button-border;
+    font-weight: bold;
+    font-size: 1.5rem;
+
+    &::before {
+      z-index: -1;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      border: 2px solid $button-border--active;
+      transition: transform $time, opacity $time;
+      will-change: transform;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+        transform: translate3d(0.625rem, 0.625rem, 0);
+      }
+    }
+  }
+
+  &--disabled {
+    color: $button-disabled;
+    border-color: $button-disabled;
+    cursor: not-allowed;
+
+    &:hover {
+      color: $button-disabled;
+      border-color: $button-disabled;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+}

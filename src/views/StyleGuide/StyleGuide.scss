@@ -1,0 +1,33 @@
+.style-guide {
+  position: relative;
+
+  &__section {
+    padding: 2rem 0;
+
+    &--accent {
+      background-color: #FFFFFF;
+
+      .style-guide__section-heading {
+        color: #000000;
+      }
+    }
+
+    &-heading {
+      margin: 0 0 2rem 0;
+    }
+  }
+
+  &__content {
+    position: relative;
+
+    &--flex-grid {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+
+      & > * {
+        margin: 0 1.5rem 1.5rem 0;
+      }
+    }
+  }
+}
