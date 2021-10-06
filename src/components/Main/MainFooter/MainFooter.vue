@@ -13,7 +13,7 @@
     <div class="main-footer-content">
       <div class="container main-footer-content__wrapper">
         <div class="main-footer-content__info">
-          <ul 
+          <ul
             class="main-footer-content__block"
             v-for="(block, index) in footerInfo"
             :key="index"
@@ -33,7 +33,7 @@
                 >
                   {{ infoItem.name }}
                 </a>
-                
+
                 <p class="main-footer-content__block-text" v-else>
                   {{ infoItem.name }}
                 </p>
@@ -43,7 +43,7 @@
         </div>
 
         <ul class="main-footer-content__navigation">
-          <li 
+          <li
             class="main-footer-content__navigation-item"
             v-for="menuItem in footerMenu"
             :key="menuItem.name"
@@ -64,11 +64,11 @@
     <div class="main-footer-info">
       <div class="main-footer-info__wrapper container">
         <p class="main-footer-info__copyright-text">
-          © 2021 Radek Wawrzyk - designed with love by jakubkowalski.dev  
+          © 2021 Radek Wawrzyk - designed with love by jakubkowalski.dev
         </p>
 
         <ul class="main-footer-info__socials">
-          <li 
+          <li
             class="main-footer-info__socials-item"
             v-for="menuItem in footerSocials"
             :key="menuItem.name"

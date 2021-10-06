@@ -5,10 +5,10 @@
     title="Homepage"
     class="base-logo"
   >
-    <svg 
-      :width="width" 
-      :height="height" 
-      viewBox="0 0 336 62" 
+    <svg
+      :width="width"
+      :height="height"
+      viewBox="0 0 336 62"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       class="base-logo__inner"
